@@ -7,11 +7,12 @@ body {
 .game-container {
     position: relative;
     height: 200px;
-    width: 395px;
+    width: 500px;
     border: 1px solid black;
     background-image: url(./images/game\ background.jpg);
     background-size: 100% 100%; 
     background-repeat: no-repeat;
+    margin: auto;
 }
 
 .cat {
@@ -29,6 +30,7 @@ body {
     width: 50px;
     height: 50px;
     animation: obstacle 2s infinite linear;
+    margin: auto;
 }
 
 @keyframes obstacle {
@@ -37,7 +39,7 @@ body {
 }
 
 #game-over {
-    margin-left: 145px;
+    margin-left: 870px;
 }
 
 #game-over h1 {
@@ -53,10 +55,10 @@ body {
 
 #jumpButton {
     display: inline-block;
-    margin-left: 175px;
-    margin-top: 10px;
     border-radius: 5px;
     overflow: hidden;
+    margin-left: 900px;
+    margin-top: 10px;
 }
 
 #jumpButton img {
@@ -73,3 +75,16 @@ body {
     text-align: center;
     font-size: 50px;
 }
+
+
+/* Media query for phones */
+@media only screen and (max-width: 768px) {
+#jumpButton {
+    margin-left: 240px;
+}
+#game-over {
+    margin-left: 210px;
+}
+
+  }
+  

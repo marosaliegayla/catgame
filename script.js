@@ -3,6 +3,8 @@ const gameContainer = document.querySelector('.game-container');
 const obstacle = document.querySelector('.obstacle');
 const gameOverContainer = document.getElementById('game-over');
 const jumpButton = document.getElementById('jumpButton');
+const jumpSound = document.getElementById('jumpSound');
+const collisionSound = document.getElementById('collisionSound'); // New: Collision sound element
 
 let isJumping = false;
 let isGameOver = false;
@@ -10,6 +12,8 @@ let jumpCount = 0;
 
 jumpButton.addEventListener('click', () => {
     if (!isJumping && !isGameOver) {
+        jumpSound.currentTime = 0; // Reset sound to start in case it's already playing
+        jumpSound.play();
         jump();
         jumpCount++;
         updateJumpCount();
@@ -54,6 +58,8 @@ function checkCollision() {
         isGameOver = true;
         obstacle.style.animation = 'none';
         obstacle.style.right = `${obstacleRect.right}px`;
+        collisionSound.currentTime = 0; // Reset sound to start in case it's already playing
+        collisionSound.play();
         showGameOverMessage();
     }
 }
