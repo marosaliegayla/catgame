@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+    font-family: "VT323", monospace;
+}
+
+.game-container {
+    position: relative;
+    height: 200px;
+    width: 395px;
+    border: 1px solid black;
+    background-image: url(./images/game\ background.jpg);
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+}
+
+.cat {
+    position: absolute;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.obstacle {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    animation: obstacle 2s infinite linear;
+}
+
+@keyframes obstacle {
+    0% { right: 0; }
+    100% { right: 100%; }
+}
+
+#game-over {
+    margin-left: 145px;
+}
+
+#game-over h1 {
+    margin-bottom: 20px;
+}
+
+#game-over button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+#jumpButton {
+    display: inline-block;
+    margin-left: 175px;
+    margin-top: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#jumpButton img {
+    width: 50px;
+    height: auto;
+    display: block;
+}
+
+.try-again-button {
+    font-family: "VT323", monospace;
+}
+
+#jumpCount {
+    text-align: center;
+    font-size: 50px;
+}
