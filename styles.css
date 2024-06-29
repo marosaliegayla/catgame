@@ -7,12 +7,13 @@ body {
 .game-container {
     position: relative;
     height: 200px;
-    width: 500px;
+    width: 450px;
     border: 1px solid black;
     background-image: url(./images/game\ background.jpg);
     background-size: 100% 100%; 
+    background-position: center; 
     background-repeat: no-repeat;
-    margin: auto;
+    margin: 0 auto; 
 }
 
 .cat {
@@ -39,7 +40,8 @@ body {
 }
 
 #game-over {
-    margin-left: 870px;
+    text-align: center; /* Center align content */
+    margin-top: 20px; /* Adjust margin as needed */
 }
 
 #game-over h1 {
@@ -50,16 +52,18 @@ body {
     padding: 10px 20px;
     font-size: 1em;
     cursor: pointer;
-    margin-left: 5px;
+    margin: 5px; /* Adjust margins as needed */
 }
 
+
 #jumpButton {
-    display: inline-block;
+    display: block; /* Change to block to center horizontally */
+    width: fit-content; /* Adjust width as needed */
+    margin: 10px auto 0; /* Auto margin horizontally centers the button */
     border-radius: 5px;
     overflow: hidden;
-    margin-left: 900px;
-    margin-top: 10px;
 }
+
 
 #jumpButton img {
     width: 50px;
@@ -77,14 +81,20 @@ body {
 }
 
 
-/* Media query for phones */
-@media only screen and (max-width: 768px) {
-#jumpButton {
-    margin-left: 240px;
-}
-#game-over {
-    margin-left: 210px;
-}
+@media (max-width: 768px) {
+    #jumpButton {
+        margin: 10px auto 0; /* Auto margin centers horizontally */
+    }
 
-  }
+    #game-over {
+        margin-top: 20px; /* Adjust margin as needed */
+    }
+
+    .game-container {
+        width: 90%; /* Adjust width to fill the screen */
+        max-width: 100%; /* Ensure it doesn't exceed screen width */
+        margin: 10px auto; /* Auto margin centers horizontally */
+        padding: 10px; /* Optional: Add padding for better spacing */
+    }
+}
   
